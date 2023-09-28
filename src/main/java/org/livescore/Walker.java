@@ -69,6 +69,7 @@ public class Walker {
 
                 ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(content);
                 walkStream(byteArrayInputStream, entry.getName());
+                byteArrayInputStream.close();
             }
         }
     }
@@ -104,6 +105,8 @@ public class Walker {
                 byte[] content = new byte[(int) entry.getSize()];
                 input.read(content, 0, (int) entry.getSize());
             }
+        } catch (Exception e) {
+            int i = 0;
         }
     }
 
@@ -112,6 +115,8 @@ public class Walker {
         byte[] content = input.readAllBytes();
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(content);
         parser.parse(byteArrayInputStream);
+        byteArrayInputStream.close();
+        input.close();
     }
 
 }

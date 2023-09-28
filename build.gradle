@@ -13,9 +13,16 @@ dependencies {
     implementation 'commons-cli:commons-cli:1.5.0'
     implementation 'commons-io:commons-io:2.11.0'
     implementation 'org.apache.commons:commons-csv:1.10.0'
-    implementation 'org.apache.commons:commons-compress:1.22'
+    implementation 'org.apache.commons:commons-compress:1.23.0'
     implementation 'nl.basjes.parse.httpdlog:httpdlog-parser:5.8'
     implementation 'org.tukaani:xz:1.9'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2'
+
+    // logging
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.11'
+    implementation group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '6.6'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
+    implementation group: 'org.codehaus.janino', name: 'janino', version: '3.1.6'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'

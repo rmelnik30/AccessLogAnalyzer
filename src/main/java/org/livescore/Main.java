@@ -76,7 +76,7 @@ public class Main {
         Parser parser = new Parser(analyzerList, outputFolder);
         Walker walker = new Walker(parser);
         walker.walk(inputFile);
-        analyzerList.forEach(analyzer -> analyzer.flushResults(outputFolder));
+        analyzerList.forEach(analyzer -> analyzer.flushResults2(outputFolder));
     }
 
 }
